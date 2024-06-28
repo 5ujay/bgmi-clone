@@ -1,8 +1,22 @@
-# React + Vite
+# BGMI Website Clone 🚀🎮
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Installation
+To get started with this project, follow these steps:
 
-Currently, two official plugins are available:
+**Clone the repository:**
+   ```bash
+   git clone https://github.com/5ujay/bgmi-clone.git
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+   cd bgmi-website-clone
+
+   npm install
+   # or
+   yarn
+
+   Start the frontend development server with `npm run dev`.
+
+
+Unique and diffrenet idea 💡 I hope you like this then star ⭐ the repo
+Thanks 
+
+

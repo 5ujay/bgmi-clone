@@ -13,10 +13,8 @@ To get started with this project, follow these steps:
    # or
    yarn
 
-   Start the frontend development server with `npm run dev`.
+   Start :- npm run dev
 
-
-Unique and diffrenet idea 💡 I hope you like this then star ⭐ the repo
-Thanks 
+# Unique and diffrenet idea 💡 I hope you like this then star ⭐ the repo
 
 

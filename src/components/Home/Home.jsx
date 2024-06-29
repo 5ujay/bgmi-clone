@@ -77,14 +77,22 @@ const Home = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={android_play} alt="Android Play" className="w-40" />
+              <img
+                src={android_play}
+                alt="Android Play"
+                className="w-40 border border-white rounded-md"
+              />
             </a>
             <a
               href="https://apps.apple.com/app/id1526436837?mt=8"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={ios_play} alt="iOS Play" className="w-40" />
+              <img
+                src={ios_play}
+                alt="iOS Play"
+                className="w-40 border rounded-md"
+              />
             </a>
           </div>
           <div>

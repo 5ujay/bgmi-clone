@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import android_play from "../../assets/HomeImg/android_play.webp";
 import ios_play from "../../assets/HomeImg/ios_play.webp";
 import app from "../../assets/HomeImg/app.png";
@@ -7,6 +7,8 @@ import NewsData from "../../AllData/NewsData";
 import NewsItem from "../../ReuseComp/NewsItem";
 import PaternsData from "../../AllData/PatnersData";
 import bg_video from "../../assets/HomeImg/home_bg_video.mp4";
+import { FaRegCirclePlay } from "react-icons/fa6";
+import { FaRegCirclePause } from "react-icons/fa6";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
@@ -18,21 +20,54 @@ import { Pagination } from "swiper/modules";
 import PatnerItem from "../../ReuseComp/PatnerItem";
 
 const Home = () => {
+  const [play, setPlay] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setPlay(true);
+    }
+  };
+
+  const handlePause = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      setPlay(false);
+    }
+  };
   return (
     <div>
       {/* ========= herosection ========= */}
       <div className="flex flex-col-reverse xl:flex-row bg-orange-500 min-h-screen w-full relative">
         {/* Video as background */}
         <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src={bg_video}
-          type="video/mp4"
-          autoPlay
+          ref={videoRef}
+          className="absolute w-full h-full object-cover"
           loop
-        ></video>
+        >
+          <source src={bg_video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
 
-        {/* Left side with text and buttons */}
         <div className="xl:w-2/3 flex flex-col justify-center items-center xl:pl-20 py-8 xl:py-0 relative z-10">
+          <div>
+            {play === true ? (
+              <button
+                onClick={handlePause}
+                className="relative bg-white text-3xl rounded-full"
+              >
+                <FaRegCirclePause />
+              </button>
+            ) : (
+              <button
+                onClick={handlePlay}
+                className="relative bg-white text-3xl rounded-full"
+              >
+                <FaRegCirclePlay />
+              </button>
+            )}
+          </div>
           <div className="text-white text-4xl lg:text-6xl xl:text-8xl font-semibold text-center xl:mb-12">
             INDIA KA BATTLEGROUNDS
           </div>
